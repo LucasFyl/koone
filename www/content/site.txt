@@ -1,0 +1,17 @@
+Title: Kooné
+
+----
+
+Author: Lucas Fayolle
+
+----
+
+Description: Konné’s portfolio
+
+----
+
+Keywords: Koone, photo, photography, berlin
+
+----
+
+Copyright: © 2015-(date: Year) (link: http://koone.de text: KOONÉ)

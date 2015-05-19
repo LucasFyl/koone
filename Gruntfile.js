@@ -141,5 +141,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('test', ['jshint', 'qunit']);
 
 };
