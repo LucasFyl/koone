@@ -57,11 +57,49 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         globals: {
-          jQuery: true
+          //jQuery Globals
+          "jQuery": true,
+          "$": true,
+          //GSAP Globals
+          "TimelineLite" : false,
+          "TimelineMax" : false,
+          "TweenLite" : false,
+          "TweenMax" : false,
+          "Back" : false,
+          "Bounce" : false,
+          "Circ" : false,
+          "Cubic" : false,
+          "Ease" : false,
+          "EaseLookup" : false,
+          "Elastic" : false,
+          "Expo" : false,
+          "Linear" : false,
+          "Power0" : false,
+          "Power1" : false,
+          "Power2" : false,
+          "Power3" : false,
+          "Power4" : false,
+          "Quad" : false,
+          "Quart" : false,
+          "Quint" : false,
+          "RoughEase" : false,
+          "Sine" : false,
+          "SlowMo" : false,
+          "SteppedEase" : false,
+          "Strong" : false,
+          "Draggable" : false,
+          "SplitText" : false,
+          "VelocityTracker" : false, 
+          "CSSPlugin" : false,
+          "ThrowPropsPlugin" : false, 
+          "BezierPlugin" : false
         }
       },
       gruntfile: {
         src: 'Gruntfile.js'
+      },
+      scripts: {
+        src: ['www/assets/scripts/**/*.js', 'www/assets/scripts/**/**/*.js', 'www/assets/scripts/*.js']
       },
       lib_test: {
         src: ['lib/**/*.js', 'test/**/*.js']
@@ -77,6 +115,10 @@ module.exports = function(grunt) {
         options: {
           nospawn: true
         }
+      },
+      scripts: {
+        files: ['www/assets/scripts/**/*.js', 'www/assets/scripts/**/**/*.js', 'www/assets/scripts/*.js'],
+        tasks: ['jshint']
       },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
