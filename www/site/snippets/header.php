@@ -16,14 +16,17 @@
 
   <header>
 
-    <a href="#" class="sidebar-trigger">X</a>
+    <div class="container">
 
-    <h1>
-      <a class="logo" href="<?php echo url() ?>">
-        KOONÉ
-        <!--<img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />-->
-      </a>  
-    </h1>
-    
+      <h1 class="logo col-xs-12 col-sm-9">
+        <a href="<?php echo url() ?>">
+          KOONÉ
+          <!--<img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />-->
+        </a>  
+      </h1>
+
+      <a href="#" class="sidebar-trigger col-xs-3">X</a>
+
+    </div>
     
   </header>

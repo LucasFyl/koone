@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          compress: true,
+          compress: false,
           yuicompress: true,
           optimization: 2
         },
@@ -56,7 +56,10 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
+        devel: true,
         globals: {
+          // iScroll Globals
+          "IScroll": true,
           //jQuery Globals
           "jQuery": true,
           "$": true,
