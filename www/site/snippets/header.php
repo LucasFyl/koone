@@ -20,7 +20,7 @@
 
       <h1 class="logo col-xs-3">
         <a href="<?php echo url() ?>">
-          KOONÉ
+          Kooné
           <!--<img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />-->
         </a>  
       </h1>

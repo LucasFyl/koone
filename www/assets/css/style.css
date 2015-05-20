@@ -2551,6 +2551,7 @@ h1 {
 }
 h1.logo {
   font-family: 'RleudCondensed-ExtraLight', helvetica, sans-serif;
+  text-transform: none;
   margin: 15px 0 7px;
   display: inline-block;
   vertical-align: middle;
