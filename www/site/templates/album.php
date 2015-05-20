@@ -1,30 +1,31 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+  <main class="main" role="main" id="album">
 
-    <div class="sidebar hidden">
-        <?php snippet('menu') ?>
-    </div>
+    <div class="scrollContainer">
+      <div id="gallery">
+        <figure class='first'>
+          <h1><?php echo $page->title()->html() ?></h1>
+          <ul class="meta">
+            <li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
+            <li><b>Tags:</b> <?php echo $page->tags() ?></li>
+          </ul>
+          <div class="text">
+            <?php echo $page->text()->kirbytext() ?>
+          </div>
+        </figure>
 
-    <div id="gallery">
-      <div>
-        <h1><?php echo $page->title()->html() ?></h1>
-        <ul class="meta">
-          <li><b>Year:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
-          <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-        </ul>
-        <div class="text">
-          <?php echo $page->text()->kirbytext() ?>
-        </div>
+        <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
+        <figure>
+          <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
+        </figure>
+        <?php endforeach ?>
       </div>
-
-      <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-      <figure>
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">
-      </figure>
-      <?php endforeach ?>
     </div>
 
+    <div class="sidebar col-sm-3">
+      <?php snippet('menu') ?>  
+    </div>
     
 
     <!--
@@ -41,3 +42,6 @@
     -->
 
   </main>
+
+
+<?php snippet('footer') ?>

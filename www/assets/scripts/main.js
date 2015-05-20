@@ -1,10 +1,11 @@
-var myScroll;
+var myScroll,
+	isSidebar = false;
 
 function loaded() {
     myScroll = new IScroll('.scrollContainer', {
     	scrollX: true, 
     	scrollY: false,
-    	scrollbars: false,
+    	scrollbars: true,
     	mouseWheel: true,
     	keyBindings: true,
     	fadeScrollbars: true
@@ -12,34 +13,57 @@ function loaded() {
     });
 }
 
-function setCorrectSize() {
-	var totalWidths = 300,
+function homeSidebarOverride() {
+	if ( isSidebar === true ) {
+		var	marginVal = 25;
+		TweenMax.set('.scrollContainer', {marginLeft:marginVal+'%'});
+	} else {
+		TweenMax.set('.scrollContainer', {marginLeft:0});
+	}
+}
+
+function initGallery() {
+	var totalWidths = -20,
 		boxHeight = $('#gallery').height();
-
-	// Set image Height and calculate width
-	$('#gallery > figure').each(function(){
-		var figure = $(this),
-			aphoto = $(this).find('img');
-			TweenMax.set(figure, {height:boxHeight,onComplete:function(){
-				totalWidths += aphoto.width();
+	if ($('.main').is('#album')) {totalWidths += 50;}
+	var setSizes = function(){
+		// Set image Height and calculate width
+		$('#gallery > figure').each(function(){
+			var figure = $(this);
+				// aphoto = $(this).find('img');
+				TweenMax.set(figure, {height:boxHeight,onComplete:function(){
+					totalWidths += ( figure.width() + 20);
+				}});
+		});
+		setTimeout(function(){
+			// Set gallery size
+			TweenMax.set('#gallery', {width:totalWidths,height:boxHeight,onComplete:function(){
+				loaded();
 			}});
-	});
+		},100);
+	};
+	
+	var setSidebar = function() {
+		if ( isSidebar === true ) {
+			$('.sidebar').show();
+		} else if ( isSidebar === false ) {
+			$('.sidebar').hide();
+		}
+	};
 
-	// Set gallery size
-	TweenMax.set('#gallery', {width:totalWidths,height:boxHeight,onComplete:function(){
-		loaded();
-	}});
+
+	setSizes();
+	if ( $('.main').is('#home') ) { 
+		isSidebar = true; 
+		homeSidebarOverride();
+	}
+	setSidebar();
 }
 
 $( document ).ready(function(){
 
 	'use strict';
 
-	setCorrectSize();
-
-
-	// setTimeout(function(){
-	// 	TweenMax.to('#gallery', 2, {left:'-100%',ease:Power4.easeInOut});
-	// },1000);
+	initGallery();
 
 });

@@ -2551,16 +2551,21 @@ h1 {
 }
 h1.logo {
   font-family: 'RleudCondensed-ExtraLight', helvetica, sans-serif;
-  margin: 15px 0;
+  margin: 15px 0 7px;
   display: inline-block;
   vertical-align: middle;
   padding: 0;
+  text-align: right;
+  position: fixed;
+  left: 0;
+  padding-right: 35px;
 }
 h1.logo a,
 h1.logo a:hover,
 h1.logo a:active,
 h1.logo a:visited {
   text-decoration: none !important;
+  float: none;
 }
 h1,
 h2,
@@ -2604,11 +2609,31 @@ header {
   min-height: 45px;
   overflow: hidden;
 }
-header a.sidebar-trigger {
-  display: inline-block;
+header a.menu {
+  display: block;
   width: auto;
   float: right;
   font-size: 2em;
+  height: 100%;
+}
+header a.menu span {
+  vertical-align: middle;
+  line-height: 350%;
+}
+#home .sidebar {
+  display: block;
+  opacity: 1;
+}
+#album .first {
+  width: 350px;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: right;
+}
+@media screen and (max-width: 1199px) {
+  #album .first {
+    text-align: left;
+  }
 }
 main {
   position: relative;
@@ -2625,19 +2650,30 @@ main .sidebar {
   position: fixed;
   z-index: 99;
   top: 10%;
-  height: 100%;
-  width: 300px;
+  left: 0;
+  height: 80%;
   background: white;
+  min-width: 180px;
+  opacity: 0;
+  display: none;
+  text-align: right;
+  padding-right: 35px;
+  padding-top: 100px;
+}
+@media screen and (max-width: 650px) {
+  main .sidebar {
+    opacity: 0 !important;
+    display: none !important;
+  }
 }
 main .scrollContainer {
   position: relative;
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 main #gallery {
   position: absolute;
   z-index: 1;
-  margin-left: 300px;
   max-height: 100%;
   width: 100%;
   min-width: 100%;
@@ -2649,6 +2685,11 @@ main #gallery > div {
   float: left;
   height: 100%;
   width: auto;
+  padding-right: 20px;
+}
+main #gallery > figure:last-child,
+main #gallery > div:last-child {
+  padding-right: 0;
 }
 main #gallery > figure img,
 main #gallery > div img {
