@@ -27,6 +27,10 @@ h1 {
 		left: 0;
 		padding-right: 35px;
 		a, a:hover, a:active, a:visited {text-decoration: none !important;float:none;}
+
+		@media screen and (max-width: 1035px) {
+			padding-left: 15px;
+		}
 	}
 }
 h1, h2, h3, h4, h5 {
@@ -65,11 +69,11 @@ header {
 		float: right;
 		font-size: 2em;
 		height: 100%;
-		
+		padding-right: 0;
 		span {
 			vertical-align: middle;
 			line-height: 350%;
-
+			
 		}
 	}
 }
@@ -105,7 +109,7 @@ main {
 
 	> div {
 		height: 100%;
-		overflow: hidden;
+		// overflow: hidden;
 		// position: relative;
 		// overflow-y: hidden;
 	}

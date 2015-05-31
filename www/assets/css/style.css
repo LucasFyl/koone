@@ -2568,6 +2568,11 @@ h1.logo a:visited {
   text-decoration: none !important;
   float: none;
 }
+@media screen and (max-width: 1035px) {
+  h1.logo {
+    padding-left: 15px;
+  }
+}
 h1,
 h2,
 h3,
@@ -2616,6 +2621,7 @@ header a.menu {
   float: right;
   font-size: 2em;
   height: 100%;
+  padding-right: 0;
 }
 header a.menu span {
   vertical-align: middle;
@@ -2651,7 +2657,6 @@ main {
 }
 main > div {
   height: 100%;
-  overflow: hidden;
 }
 main .sidebar {
   position: fixed;

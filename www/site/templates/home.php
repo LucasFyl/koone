@@ -3,7 +3,7 @@
   <main class="main" role="main" id="home">
 
 	
-	<div class="container">
+	<div class="container-fluid">
 		<div class="scrollContainer">
 			<div class="featured-pics" id="gallery">
 		    	<?php foreach($page->images() as $image): ?>
