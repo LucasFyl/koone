@@ -1,30 +1,45 @@
-var myScroll,
-	isSidebar = false;
+/*jshint unused:false */
+var _isSidebar = false;
 
-function loaded() {
-    myScroll = new IScroll('.scrollContainer', {
-    	scrollX: true, 
-    	scrollY: false,
-    	scrollbars: true,
-    	mouseWheel: true,
-    	keyBindings: true,
-    	fadeScrollbars: true
-    	// bindToWrapper: true
-    });
+// Display sidebar if necesary
+function isSidebar() {
+    return(_isSidebar);
+}
+function setSidebar() {
+	if ( _isSidebar === true ) {
+		$('.sidebar').show();
+		return 'sidebar';
+	} else if ( _isSidebar === false ) {
+		$('.sidebar').hide();
+		return 'no sidebar';
+	}
 }
 
 function initGallery() {
-	var totalWidths = -19, // 20 margin -1px to be sure images fits the container
+	var myScroll,
+		totalWidths = -19, // -20 marginLeft -1px to be sure images fits the container
 		boxHeight = $('#gallery').height();
+		
+
+	// Page specific override
 	var foo = $('.sidebar').parent().width(),
 		marginVal = ( (foo / 100) * 16.66666667 );
-
 	if ($('.main').is('#album')) {totalWidths += 50;}
-	if ($('.main').is('#home')) {
-		// totalWidths += (marginVal / 2);
-		TweenMax.set('.scrollContainer', {marginLeft:marginVal,marginRight:marginVal/2});
-	}
+	if ($('.main').is('#home')) {_isSidebar = true;TweenMax.set('.scrollContainer', {marginLeft:marginVal,marginRight:marginVal/2});}
 
+	// Initiate horizontal scroller  |  http://iscrolljs.com/
+	var initScroller = function() {
+	    myScroll = new IScroll('.scrollContainer', {
+	    	scrollX: true, 
+	    	scrollY: false,
+	    	scrollbars: true,
+	    	mouseWheel: true,
+	    	keyBindings: true,
+	    	fadeScrollbars: true
+	    });
+	};
+
+	// Set images and scrolling area size 
 	var setSizes = function(){
 		// Set image Height and calculate width
 		$('#gallery > figure').each(function(){
@@ -34,24 +49,12 @@ function initGallery() {
 				}});
 		}).promise().done(function(){
 			TweenMax.set('#gallery', {width:totalWidths,height:boxHeight,onComplete:function(){
-				loaded();
+				initScroller();
 			}});
 		});
 	};
 	
-	var setSidebar = function() {
-		if ( isSidebar === true ) {
-			$('.sidebar').show();
-		} else if ( isSidebar === false ) {
-			$('.sidebar').hide();
-		}
-	};
-
-
 	setSizes();
-	if ( $('.main').is('#home') ) { 
-		isSidebar = true; 
-	}
 	setSidebar();
 }
 $(document).ready(function(){
