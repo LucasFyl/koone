@@ -15,7 +15,7 @@ function loaded() {
 
 function homeSidebarOverride() {
 	if ( isSidebar === true ) {
-		var	marginVal = 25;
+		var	marginVal = 8;
 		TweenMax.set('.scrollContainer', {marginLeft:marginVal+'%'});
 	} else {
 		TweenMax.set('.scrollContainer', {marginLeft:0});
@@ -23,24 +23,22 @@ function homeSidebarOverride() {
 }
 
 function initGallery() {
-	var totalWidths = -20,
+	var totalWidths = -19, // 20 margin -1px to be sure images fits the container
 		boxHeight = $('#gallery').height();
+
 	if ($('.main').is('#album')) {totalWidths += 50;}
 	var setSizes = function(){
 		// Set image Height and calculate width
 		$('#gallery > figure').each(function(){
 			var figure = $(this);
-				// aphoto = $(this).find('img');
 				TweenMax.set(figure, {height:boxHeight,onComplete:function(){
 					totalWidths += ( figure.width() + 20);
 				}});
-		});
-		setTimeout(function(){
-			// Set gallery size
+		}).promise().done(function(){
 			TweenMax.set('#gallery', {width:totalWidths,height:boxHeight,onComplete:function(){
 				loaded();
 			}});
-		},100);
+		});
 	};
 	
 	var setSidebar = function() {
@@ -59,11 +57,19 @@ function initGallery() {
 	}
 	setSidebar();
 }
-
-$( document ).ready(function(){
+$(document).ready(function(){
+	setTimeout(function(){
+		initGallery();
+	}, 100);
+	
+});
+$( window ).load(function() { 
 
 	'use strict';
 
-	initGallery();
+	setTimeout(function(){
+		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
+	}, 300);
+	
 
 });
