@@ -1,0 +1,32 @@
+{
+  "name": "kooné",
+  "version": "0.1.0",
+  "homepage": "https://github.com/LucasFyl/koone",
+  "authors": [
+    "Lucas F <lfayolle1@gmail.com>"
+  ],
+  "description": "Photography Portfolio of Kooné",
+  "main": "www/index.php",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "kooné",
+    "photography",
+    "berlin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "gsap": "~1.16.1",
+    "jquery": "~2.1.4",
+    "iscroll": "^5.1.3"
+  }
+}
