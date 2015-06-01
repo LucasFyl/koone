@@ -2532,6 +2532,40 @@ pre code {
   font-family: 'RleudCondensed-ExtraLight';
   src: url('../fonts/RleudCondensed-ExtraLight.woff') format('woff'), url('../fonts/RleudCondensed-ExtraLight.svg#RleudCondensed-ExtraLight') format('svg');
 }
+.loading {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em;
+  vertical-align: middle;
+  text-align: center;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top-color: #cecece;
+  border-bottom-color: #cecece;
+  border-radius: 50%;
+}
+.outer {
+  animation: spin 1s infinite;
+}
+.inner {
+  animation: spin 1s infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+#wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 48%;
+  margin-top: 25%;
+  position: relative;
+}
 /* B A S E
 -------------------------------------------------- */
 html {

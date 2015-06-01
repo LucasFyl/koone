@@ -1,0 +1,41 @@
+@size: 0.5em;
+@color: #cecece;
+
+.loading{
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding: @size;
+  vertical-align: middle;
+  text-align: center;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top-color: @color;
+  border-bottom-color: @color;
+  border-radius: 50%;
+}
+
+.outer{
+  animation: spin 1s infinite;
+}
+
+.inner{
+  animation: spin 1s infinite;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+#wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 48%;
+  margin-top: 25%;
+  position: relative;
+}

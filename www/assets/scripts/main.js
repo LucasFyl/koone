@@ -112,7 +112,7 @@ $( window ).load(function() {
 
 	setTimeout(function(){
 		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
-	}, 300);
+	}, 350);
 	
 
 

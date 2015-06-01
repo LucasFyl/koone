@@ -14,7 +14,13 @@
 </head>
 <body>
 
-  <div id="loader"></div>
+  <div id="loader">
+    <div id="wrap">
+      <div class="loading outer">
+        <div class="loading inner"></div>
+      </div>
+    </div>
+  </div>
 
   
   <header>
