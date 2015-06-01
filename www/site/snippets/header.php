@@ -14,6 +14,9 @@
 </head>
 <body>
 
+  <div id="loader"></div>
+
+  
   <header>
 
     <div class="container">
@@ -30,5 +33,3 @@
     </div>
     
   </header>
-
-  <div id="loader"></div>

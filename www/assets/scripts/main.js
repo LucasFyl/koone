@@ -36,6 +36,9 @@ function initGallery() {
 		setSidebar(false);
 		totalWidths += 55;
 	}
+	if ($('.main').is('#about')) {
+		setSidebar(false);
+	}
 	if ($('.main').is('#home')) {
 		_isSidebar = true;
 		TweenMax.set('.scrollContainer', {marginLeft:marginVal,marginRight:marginVal/2});

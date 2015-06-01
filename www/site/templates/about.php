@@ -1,17 +1,30 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
-
-    <div class="sidebar hidden">
-        <?php snippet('menu') ?>
-    </div>
-    <div id="gallery">
-    	<div>
-    		<h1><?php echo $page->title()->html() ?></h1>
-			<?php echo $page->text()->kirbytext() ?>
-    	</div>
+  <main class="main" role="main" id="about">
+    <div class="container">
+        <div class="sidebar col-xs-2">
+            <?php snippet('menu') ?>
+        </div>
+    
+        <div class="col-xs-12">
+            <h1><?php echo $page->title()->html() ?></h1>
+        </div>
+        <div class="col-xs-4">
+            <?php echo $page->textcol1()->kirbytext() ?>
+        </div>
+        <div class="col-xs-4">
+            <?php echo $page->textcol2()->kirbytext() ?>
+            <a href="mailto:contact@koone.de" class="contact"><?php echo $page->contactText()->html() ?></a>
+        </div>
+        <div class="col-xs-4">
+            <?php echo $page->textcol3()->kirbytext() ?>
+        </div>
     </div>
 
   </main>
-
+<script>
+    $( window ).load(function(){
+        setSidebar(false);
+    });
+</script>
 <?php snippet('footer') ?>
