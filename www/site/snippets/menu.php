@@ -20,8 +20,8 @@
           <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
         </li>
         <?php endforeach ?>
-        <li class="fadein fromleft"><a href="#" target="_blank">Facebook</a></li>
-        <li class="fadein fromleft"><a href="#" target="_blank">Instagram</a></li>
+        <li class="fadein fromleft"><a href="https://www.facebook.com/koonepics/" target="_blank">Facebook</a></li>
+        <li class="fadein fromleft"><a href="https://instagram.com/koone/" target="_blank">Instagram</a></li>
       </ul>
     </div>
 </nav>

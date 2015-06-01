@@ -48,21 +48,12 @@ function setSidebar(val) {
 function initGallery() {
 	var totalWidths = -14, // -15 marginLeft -1px to be sure images fits the container
 		boxHeight = $('#gallery').height();
-		
 
 	// Page specific override
 	var foo = $('.sidebar').parent().width(),
 		marginVal = ( (foo / 100) * 16.66666667 );
 	if ($('.main').is('#album')) {
-		setSidebar(false);
 		totalWidths += 55;
-	}
-	if ($('.main').is('#about')) {
-		setSidebar(false);
-	}
-	if ($('.main').is('#home')) {
-		_isSidebar = true;
-		TweenMax.set('.scrollContainer', {marginLeft:marginVal,marginRight:marginVal/2});
 	}
 
 	// Initiate horizontal scroller  |  http://iscrolljs.com/
@@ -93,13 +84,13 @@ function initGallery() {
 	};
 	
 	setSizes();
-	// setSidebar();
 }
 $(document).ready(function(){
 
+	setSidebar(false);
+	
 	setTimeout(function(){
 		initGallery();
-		setAnimators();
 	}, 100);
 
 	$('body').on('click', '.sidebarTrigger', function(e) {
@@ -117,7 +108,7 @@ $( window ).load(function() {
 	'use strict';
 
 	setTimeout(function(){
-		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut,onComplete:animateInSidebar});
+		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
 	}, 350);
 	
 
