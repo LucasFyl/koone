@@ -34,7 +34,7 @@
         </a>  
       </h1>
 
-      <a href="#" class="menu pull-right sidebarTrigger col-xs-1"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+      <a href="#" class="menu pull-right sidebarTrigger col-xs-1">menu<span class="glyphicon glyphicon-menu-hamburger"></span></a>
 
     </div>
     

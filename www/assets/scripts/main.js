@@ -27,7 +27,8 @@ function setSidebar(val) {
 		} else {
 			TweenMax.to('.scrollContainer', 0.5, {marginLeft:sW + 'px',marginRight:(sW/2) + 'px',ease:Expo.easeOut});
 		}
-		TweenMax.to('.sidebar', 0.5, {css:{x:'+=100%'},ease:Expo.easeOut,onComplete:animateInSidebar});
+		TweenMax.to('.sidebar', 0.5, {css:{x:'+=100%'},ease:Expo.easeOut});
+		setTimeout(animateInSidebar,350);
 		setTimeout(function () {
 	        myScroll.refresh();
 	    }, 10);
@@ -95,6 +96,7 @@ $(document).ready(function(){
 
 	$('body').on('click', '.sidebarTrigger', function(e) {
 		e.preventDefault();
+		$(this).toggleClass('active');
 		if( _isSidebar === true ) {
 			setSidebar(false);
 		} else if ( _isSidebar === false ) {
