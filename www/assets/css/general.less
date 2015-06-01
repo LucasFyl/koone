@@ -122,15 +122,15 @@ main {
 		padding-right: 35px;
 		padding-top: 100px;
 		
-		@media screen and (max-width:650px) {
-			opacity: 0 !important;
-			display: none !important;
-		}
+		// @media screen and (max-width:650px) {
+		// 	opacity: 0 !important;
+		// 	display: none !important;
+		// }
 
 		h2 {
 			font-size: 2.1em;
 			letter-spacing: 2px;
-			font-family: 'Rleud-Demi', sans-serif;
+			font-family: 'Rleud-Bold', sans-serif;
 		}
 		li {
 			font-size: 1.2em;
@@ -171,9 +171,16 @@ main {
 	}
 }
 #about {
+	@media screen and (max-width: @screen-sm-max) {
+		overflow-y: auto;
+	}
 	.container {
 		>div:not(.sidebar) {
 			padding-left: 0;
+
+			@media screen and (max-width: @screen-sm-max) {
+				padding-left: 15px;
+			}
 			padding-right: 30px;
 			position: relative;
 			h1 {
@@ -198,9 +205,24 @@ main {
 				letter-spacing: 2px;
 				position: absolute;
 				bottom: 15px;left: 100%;
+				@media screen and (max-width: @screen-md-max) {
+					bottom: 60px;
+				}
+				@media screen and (max-width: @screen-sm-max) {
+					opacity: 0; display: none;
+				}
 				// margin-left: 10%;
 				&:hover {
 					text-decoration: underline;
+				}
+				&.sm {
+					opacity: 0; display: none;
+					position: static;
+					margin: 0 auto;
+					@media screen and (max-width: @screen-sm-max) {
+						opacity: 1;
+						display: block;
+					}
 				}
 			}
 		}

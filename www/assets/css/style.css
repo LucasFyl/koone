@@ -2664,16 +2664,10 @@ main .sidebar {
   padding-right: 35px;
   padding-top: 100px;
 }
-@media screen and (max-width: 650px) {
-  main .sidebar {
-    opacity: 0 !important;
-    display: none !important;
-  }
-}
 main .sidebar h2 {
   font-size: 2.1em;
   letter-spacing: 2px;
-  font-family: 'Rleud-Demi', sans-serif;
+  font-family: 'Rleud-Bold', sans-serif;
 }
 main .sidebar li {
   font-size: 1.2em;
@@ -2710,10 +2704,20 @@ main #gallery > div img {
   height: 100%;
   width: auto;
 }
+@media screen and (max-width: 991px) {
+  #about {
+    overflow-y: auto;
+  }
+}
 #about .container > div:not(.sidebar) {
   padding-left: 0;
   padding-right: 30px;
   position: relative;
+}
+@media screen and (max-width: 991px) {
+  #about .container > div:not(.sidebar) {
+    padding-left: 15px;
+  }
 }
 #about .container > div:not(.sidebar) h1 {
   font-family: 'Rleud-Light', helvetica, sans-serif;
@@ -2739,6 +2743,29 @@ main #gallery > div img {
   bottom: 15px;
   left: 100%;
 }
+@media screen and (max-width: 1199px) {
+  #about .container > div:not(.sidebar) .contact {
+    bottom: 60px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #about .container > div:not(.sidebar) .contact {
+    opacity: 0;
+    display: none;
+  }
+}
 #about .container > div:not(.sidebar) .contact:hover {
   text-decoration: underline;
+}
+#about .container > div:not(.sidebar) .contact.sm {
+  opacity: 0;
+  display: none;
+  position: static;
+  margin: 0 auto;
+}
+@media screen and (max-width: 991px) {
+  #about .container > div:not(.sidebar) .contact.sm {
+    opacity: 1;
+    display: block;
+  }
 }
