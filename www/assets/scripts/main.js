@@ -1,6 +1,17 @@
 /*jshint unused:false */
 var _isSidebar = false;
 var myScroll;
+// Set parts to be animated
+function setAnimators() {
+	TweenMax.set('.fadein', {opacity:0});
+	TweenMax.set('.frombottom', {css:{y:'+=40px'}});
+	TweenMax.set('.fromleft', {css:{x:'-=50px'}});
+}
+function animateInSidebar(){
+	TweenMax.staggerTo('.fadein', 0.25, {opacity:1,ease:Power2.easeOut}, 0.07);
+	TweenMax.staggerTo('.frombottom', 0.25, {css:{y:0},ease:Power3.easeOut}, 0.07);
+	TweenMax.staggerTo('.fromleft', 0.25, {css:{x:0},ease:Power3.easeOut}, 0.07);
+}
 // Display sidebar if necesary
 function isSidebar() {
     return(_isSidebar);
@@ -12,31 +23,24 @@ function setSidebar(val) {
 	if ( _isSidebar === true ) {
 		if ($('.main').is('#about') ) {
 			TweenMax.to('.main', 0.5, {marginLeft:sW + 'px',marginRight:(sW/2) + 'px',ease:Expo.easeOut});
-			TweenMax.to('.sidebar', 0.5, {css:{x:'+=100%'},ease:Expo.easeOut});
-			setTimeout(function () {
-		        myScroll.refresh();
-		    }, 10);
+			
 		} else {
 			TweenMax.to('.scrollContainer', 0.5, {marginLeft:sW + 'px',marginRight:(sW/2) + 'px',ease:Expo.easeOut});
-			TweenMax.to('.sidebar', 0.5, {css:{x:'+=100%'},ease:Expo.easeOut});
-			setTimeout(function () {
-		        myScroll.refresh();
-		    }, 10);
 		}
+		TweenMax.to('.sidebar', 0.5, {css:{x:'+=100%'},ease:Expo.easeOut,onComplete:animateInSidebar});
+		setTimeout(function () {
+	        myScroll.refresh();
+	    }, 10);
 	} else if ( _isSidebar === false ) {
 		if ($('.main').is('#about') ) {
 			TweenMax.to('.main', 0.5, {margin:0,ease:Expo.easeOut});
-			TweenMax.to('.sidebar', 0.5, {css:{x:'-=100%'},ease:Expo.easeOut});
-			setTimeout(function () {
-		        myScroll.refresh();
-		    }, 550);
 		} else {
 			TweenMax.to('.scrollContainer', 0.5, {margin:0,ease:Expo.easeOut});
-			TweenMax.to('.sidebar', 0.5, {css:{x:'-=100%'},ease:Expo.easeOut});
-			setTimeout(function () {
-		        myScroll.refresh();
-		    }, 550);
 		}
+		TweenMax.to('.sidebar', 0.5, {css:{x:'-=100%'},ease:Expo.easeOut,onComplete:setAnimators});
+		setTimeout(function () {
+	        myScroll.refresh();
+	    }, 550);
 			
 	}
 }
@@ -92,11 +96,13 @@ function initGallery() {
 	// setSidebar();
 }
 $(document).ready(function(){
+
 	setTimeout(function(){
 		initGallery();
+		setAnimators();
 	}, 100);
 
-	$('body').on('click', '.menu-trigger', function(e) {
+	$('body').on('click', '.sidebarTrigger', function(e) {
 		e.preventDefault();
 		if( _isSidebar === true ) {
 			setSidebar(false);
@@ -111,9 +117,8 @@ $( window ).load(function() {
 	'use strict';
 
 	setTimeout(function(){
-		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
+		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut,onComplete:animateInSidebar});
 	}, 350);
 	
-
 
 });

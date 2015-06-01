@@ -2647,7 +2647,7 @@ header {
   min-height: 45px;
   overflow: hidden;
 }
-header a.menu-trigger {
+header a.menu {
   display: block;
   width: auto;
   float: right;
@@ -2655,7 +2655,7 @@ header a.menu-trigger {
   height: 100%;
   padding-right: 0;
 }
-header a.menu-trigger span {
+header a.menu span {
   vertical-align: middle;
   line-height: 350%;
 }
