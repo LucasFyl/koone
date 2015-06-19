@@ -3,12 +3,13 @@
       <h2 class="fadein">Photos</h2>
       <ul>
         <?php foreach($pages->visible()->not('about') as $p): ?>
-        <?php foreach($p->children()->visible() as $p): ?>
-        <li class="fadein fromleft">
-          <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
-        </li>
+          <?php foreach($p->children()->visible() as $p): ?>
+          <li class="fadein fromleft">
+            <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
+          </li>
+          <?php endforeach ?>
         <?php endforeach ?>
-        <?php endforeach ?>
+        <li class="fadein"><a href="<?php echo url('wallpapers') ?>">Wallpapers</a></li>
       </ul>
     </div>
       

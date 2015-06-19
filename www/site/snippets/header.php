@@ -27,10 +27,9 @@
 
     <div class="container">
 
-      <h1 class="logo col-xs-2">
+      <h1 class="logo col-xs-12 col-sm-4">
         <a href="<?php echo url() ?>">
-          Kooné
-          <!--<img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />-->
+          <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
         </a>  
       </h1>
 
