@@ -16,7 +16,7 @@
     <div>
       <h2 class="fadein">Infos</h2>
       <ul>
-        <?php foreach($pages->visible()->not('albums') as $p): ?>
+        <?php foreach($pages->visible()->not('albums', 'wallpapers') as $p): ?>
         <li class="fadein fromleft">
           <a href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
         </li>
