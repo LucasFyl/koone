@@ -2779,22 +2779,64 @@ main #gallery figure {
 }
 main #gallery figure figcaption {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 15px);
   height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  opacity: 0;
+  text-align: center;
 }
-main #gallery figure figcaption h3,
-main #gallery figure figcaption p,
-main #gallery figure figcaption a {
+main #gallery figure figcaption > div {
+  height: auto;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main #gallery figure figcaption > div h3,
+main #gallery figure figcaption > div p,
+main #gallery figure figcaption > div a {
   color: white;
 }
-main #gallery figure:hover figcaption {
-  opacity: 1;
+main #gallery figure figcaption > div h3 {
+  margin-top: 0;
+  font-family: 'Rleud-Demi', helvetica, sans-serif;
+  letter-spacing: 3px;
+  margin-bottom: 5em;
+  text-transform: none;
+  font-size: 5.4em;
+}
+main #gallery figure figcaption > div p {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  font-family: 'Rleud-Bold', helvetica, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+main #gallery figure figcaption > div a {
+  font-size: 2.1em;
+  font-family: 'Rleud-Regular', helvetica, sans-serif;
+  padding: 7px;
+  border: 3px solid white;
+}
+main #gallery figure figcaption > div a:nth-child(2) {
+  float: left;
+}
+main #gallery figure figcaption > div a:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  bottom: 1px;
+  display: inline-block;
+  transform: translateX(-50%);
+}
+main #gallery figure figcaption > div a:nth-child(4) {
+  float: right;
+}
+main #gallery figure:last-child figcaption {
+  width: 100%;
 }
 @media screen and (max-width: 991px) {
   #about {

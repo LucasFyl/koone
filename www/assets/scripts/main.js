@@ -92,7 +92,7 @@ $(document).ready(function(){
 	
 	setTimeout(function(){
 		initGallery();
-	}, 100);
+	}, 750);
 
 	$('body').on('click', '.sidebarTrigger', function(e) {
 		e.preventDefault();
@@ -111,7 +111,7 @@ $( window ).load(function() {
 
 	setTimeout(function(){
 		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
-	}, 350);
+	}, 1000);
 	
 
 });
