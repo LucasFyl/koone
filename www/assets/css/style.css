@@ -2591,6 +2591,7 @@ h1.logo {
 h1.logo img {
   display: block;
   height: 100%;
+  width: 50%;
 }
 h1.logo a {
   display: block;
@@ -2719,7 +2720,7 @@ header a.menu.active {
   font-size: 3em;
   letter-spacing: 2px;
   font-family: 'Rleud-Bold', sans-serif;
-  margin-top: 0;
+  margin-top: 20px;
 }
 @media screen and (max-width: 1199px) {
   #album .first {
