@@ -20,12 +20,12 @@ h1 {
 		padding:0;
 		width: auto;
 		
-		img {display: block;height: 100%;width: 50%;}
+		img {display: block;height: 100%;width: 50%;float: right;}
 		a {display: block;height: 45px;}
 		a, a:hover, a:active, a:visited {text-decoration: none !important;float:none;}
 
 		@media screen and (max-width: 1035px) {
-			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 }
@@ -85,7 +85,6 @@ header {
 	a.menu {
 		display: block;
 		width: auto;
-		float: right;
 		font-size: 2em;
 		height: 100%;
 		line-height: 4em;
@@ -99,7 +98,7 @@ header {
 		span {
 			vertical-align: middle;
 			margin-top: -5px;
-			padding-left: 15px;
+			padding-right: 15px;
 		}
 
 		&.active {
@@ -233,7 +232,7 @@ main {
 						font-size: 5.4em;
 						opacity: 0;
 					}
-					p {
+					p:not(.link-wrap) {
 						margin-top: 3em;
 						margin-bottom: 3em;
 						font-family: @font-bold;
@@ -253,24 +252,39 @@ main {
 						// 	margin-left: -13%;
 						// }
 					}
-					a {
-						font-size: 2.1em;
-						font-family: @font-main;
-						padding: 7px;
-						border: 3px solid white;
-						&:nth-child(2) {
-							float: left;
-						}
-						&:nth-child(3) {
-							position: absolute;
-							left: 50%; bottom: 1px;
+					p.link-wrap {
+						text-align: center;
+						display: inline-block;
+						width: auto;
+						// font-size: 2.1em;
+
+						a {
 							display: inline-block;
-							transform: translateX(-50%);
-						}
-						&:nth-child(4) {
-							float: right;
+							font-family: @font-main;
+							padding: 5px 15px;
+							width: auto;
+							margin: 0 15px;
+							border: 3px solid white;
+							text-align: center;
+							// &:hover {
+							// 	background-color: rgba(255,255,255,0.5);
+							// 	color: black;
+							// }
+							// &:nth-child(2) {
+							// 	float: left;
+							// }
+							// &:nth-child(3) {
+							// 	position: absolute;
+							// 	left: 50%; bottom: 1px;
+							// 	display: inline-block;
+							// 	transform: translateX(-50%);
+							// }
+							// &:nth-child(4) {
+							// 	float: right;
+							// }
 						}
 					}
+						
 				}
 
 					

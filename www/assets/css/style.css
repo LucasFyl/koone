@@ -2592,6 +2592,7 @@ h1.logo img {
   display: block;
   height: 100%;
   width: 50%;
+  float: right;
 }
 h1.logo a {
   display: block;
@@ -2606,7 +2607,7 @@ h1.logo a:visited {
 }
 @media screen and (max-width: 1035px) {
   h1.logo {
-    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 h1,
@@ -2680,7 +2681,6 @@ header {
 header a.menu {
   display: block;
   width: auto;
-  float: right;
   font-size: 2em;
   height: 100%;
   line-height: 4em;
@@ -2694,7 +2694,7 @@ header a.menu {
 header a.menu span {
   vertical-align: middle;
   margin-top: -5px;
-  padding-left: 15px;
+  padding-right: 15px;
 }
 header a.menu.active {
   letter-spacing: 3px;
@@ -2828,31 +2828,26 @@ main #gallery figure figcaption > div h3 {
   font-size: 5.4em;
   opacity: 0;
 }
-main #gallery figure figcaption > div p {
+main #gallery figure figcaption > div p:not(.link-wrap) {
   margin-top: 3em;
   margin-bottom: 3em;
   font-family: 'Rleud-Bold', helvetica, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-main #gallery figure figcaption > div a {
-  font-size: 2.1em;
-  font-family: 'Rleud-Regular', helvetica, sans-serif;
-  padding: 7px;
-  border: 3px solid white;
-}
-main #gallery figure figcaption > div a:nth-child(2) {
-  float: left;
-}
-main #gallery figure figcaption > div a:nth-child(3) {
-  position: absolute;
-  left: 50%;
-  bottom: 1px;
+main #gallery figure figcaption > div p.link-wrap {
+  text-align: center;
   display: inline-block;
-  transform: translateX(-50%);
+  width: auto;
 }
-main #gallery figure figcaption > div a:nth-child(4) {
-  float: right;
+main #gallery figure figcaption > div p.link-wrap a {
+  display: inline-block;
+  font-family: 'Rleud-Regular', helvetica, sans-serif;
+  padding: 5px 15px;
+  width: auto;
+  margin: 0 15px;
+  border: 3px solid white;
+  text-align: center;
 }
 main #gallery figure:last-child figcaption {
   width: 100%;

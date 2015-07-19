@@ -27,13 +27,13 @@
 
     <div class="container">
 
-      <h1 class="logo col-xs-12 col-sm-4">
+      <a href="#" class="menu sidebarTrigger col-xs-1"><span class="glyphicon glyphicon-menu-hamburger"></span>menu</a>
+
+      <h1 class="logo col-xs-12 col-sm-4 pull-right">
         <a href="<?php echo url() ?>">
           <img src="<?php echo url('assets/images/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
         </a>  
       </h1>
-
-      <a href="#" class="menu pull-right sidebarTrigger col-xs-1">menu<span class="glyphicon glyphicon-menu-hamburger"></span></a>
 
     </div>
     
