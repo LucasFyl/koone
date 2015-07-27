@@ -6,13 +6,15 @@
       <div class="scrollContainer">
           <div id="gallery">
             <figure class='first'>
-              <h1><?php echo $page->title()->html() ?></h1>
-              <!-- <ul class="meta">
-                <li><b>Date:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
-                <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-              </ul> -->
-              <div class="text">
-                <?php echo $page->text()->kirbytext() ?>
+              <div>
+                <h1><?php echo $page->title()->html() ?></h1>
+                <!-- <ul class="meta">
+                  <li><b>Date:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
+                  <li><b>Tags:</b> <?php echo $page->tags() ?></li>
+                </ul> -->
+                <div class="text">
+                  <?php echo $page->text()->kirbytext() ?>
+                </div>
               </div>
             </figure>
  

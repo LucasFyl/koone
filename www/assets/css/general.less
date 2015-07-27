@@ -129,10 +129,21 @@ header {
 }
 #album {
 	.first {
-		width: 350px;
+		// width: 350px;
+		max-width: 350px;
+		width: auto;
 		padding-left: 35px;
 		padding-right: 35px;
+		padding-bottom: 20px;
 		text-align: right;
+		> div {
+			height: auto !important;
+			min-height: initial !important;	
+			display: inline-block;
+			position: relative;
+			top: 50%;
+			transform:translateY(-50%);
+		}
 		h1 {
 			font-size: 3em;
 			letter-spacing: 2px;
@@ -195,13 +206,16 @@ main {
 		min-width: 100%;
 		height: 100%;
 
-		> figure, > div {
+		> figure {
+			position: relative;
 			display: inline-block;
+			vertical-align: top;
 			float: none;
 			height: 100%;
 			min-height: 100%;
 			width: auto;
 			margin-right: 15px;
+			box-sizing: border-box;
 			&:last-child {
 				margin-right: 0;
 			}
@@ -211,9 +225,8 @@ main {
 				width: auto;
 			}
 		}
-		figure {
-			position: relative;
 
+		figure {
 			figcaption {
 				position: absolute;
 				width: ~"calc(100% - 15px)"; height: 100%;

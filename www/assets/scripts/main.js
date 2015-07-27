@@ -157,6 +157,6 @@ $(window).on('resize', function(e) {
 	  	if ($('#gallery').length) {
 	  		updateGallery();	
 	  	}
-	}, 100);
+	}, 250);
 
 });
