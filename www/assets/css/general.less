@@ -16,13 +16,24 @@ h1 {
 	font-family: @font-bold;
 
 	&.logo {
-		margin: 10px 0;
-		padding:0;
-		width: auto;
-		
-		img {display: block;height: 100%;width: 50%;float: right;}
-		a {display: block;height: 45px;}
-		a, a:hover, a:active, a:visited {text-decoration: none !important;float:none;}
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		height: 80px;
+		max-height: 80px;
+		position: relative;
+
+		img {
+			height: auto;
+			display: inline-block;
+			position: relative;
+			top: 50%;
+			float: right;
+			transform: translateY(-50%);
+			width: 60%;
+		}
+		a {height: 100%;display: block;}
+		a, a:hover, a:active, a:visited {text-decoration: none !important;float:none !important; color: black !important;}
 
 		@media screen and (max-width: 1035px) {
 			padding-right: 15px;
@@ -144,12 +155,12 @@ main {
 		height: 100%;
 	}
 	.sidebar {
-		position: fixed;
+		position: absolute;
 		z-index: 9999;
-		top: 10%;
+		top: 0;
 		left:0;
 
-		height: 80%;
+		height: 100%;
 		background: white;
 		min-width: 180px;
 
@@ -179,19 +190,20 @@ main {
 		z-index: 1;
 
 
-		max-height: 100%;
+		// min-height: 100%;
 		width: 100%;
 		min-width: 100%;
 		height: 100%;
 
 		> figure, > div {
-			display: block;
-			float: left;
+			display: inline-block;
+			float: none;
 			height: 100%;
+			min-height: 100%;
 			width: auto;
-			padding-right: 15px;
+			margin-right: 15px;
 			&:last-child {
-				padding-right: 0;
+				margin-right: 0;
 			}
 			
 			img {
@@ -201,6 +213,7 @@ main {
 		}
 		figure {
 			position: relative;
+
 			figcaption {
 				position: absolute;
 				width: ~"calc(100% - 15px)"; height: 100%;
@@ -238,19 +251,6 @@ main {
 						font-family: @font-bold;
 						letter-spacing: 2px;
 						text-transform: uppercase;
-						// position: relative;
-
-						// &:after {
-						// 	content: " ";
-						// 	height: 3px;
-						// 	width: 24%;
-						// 	display: block;
-						// 	background-color: white;
-						// 	position: absolute;
-						// 	bottom: -6px;
-						// 	left: 50%;
-						// 	margin-left: -13%;
-						// }
 					}
 					p.link-wrap {
 						text-align: center;
@@ -266,22 +266,6 @@ main {
 							margin: 0 15px;
 							border: 3px solid white;
 							text-align: center;
-							// &:hover {
-							// 	background-color: rgba(255,255,255,0.5);
-							// 	color: black;
-							// }
-							// &:nth-child(2) {
-							// 	float: left;
-							// }
-							// &:nth-child(3) {
-							// 	position: absolute;
-							// 	left: 50%; bottom: 1px;
-							// 	display: inline-block;
-							// 	transform: translateX(-50%);
-							// }
-							// &:nth-child(4) {
-							// 	float: right;
-							// }
 						}
 					}
 						
@@ -302,14 +286,24 @@ main {
 		overflow-y: auto;
 	}
 	.container {
+		// max-width: 1200px;
+		// padding-left: 5em;
+		// padding-right: 5em;
+
 		>div:not(.sidebar) {
 			padding-left: 0;
+			padding-right: 30px;
+			position: relative;
+			max-height: ~"calc(100% - 125px)";
 
 			@media screen and (max-width: @screen-sm-max) {
 				padding-left: 15px;
 			}
-			padding-right: 30px;
-			position: relative;
+
+			@media screen and (max-width: @screen-xs-max) {
+				max-height: auto;
+			}
+
 			h1 {
 				font-family: 'Rleud-Light', helvetica, sans-serif;
 				font-size: 3.2em;
@@ -320,6 +314,12 @@ main {
 			p {
 				font-size: 2.4em;
 				line-height: 1.48;
+				@media screen and (max-width: @screen-md-max) {
+					font-size: 1.8em; 				
+				}
+				@media screen and (max-width: @screen-sm-max) {
+					font-size: 2.4em; 				
+				}
 			}
 			.contact {
 				display: block;
@@ -330,25 +330,9 @@ main {
 				text-align: center;
 				font-family: 'Rleud-Demi', helvetica, sans-serif;
 				letter-spacing: 2px;
-				position: absolute;
-				bottom: 25px;left: 100%;
-				@media screen and (max-width: @screen-md-max) {
-					bottom: 60px;
-				}
-				@media screen and (max-width: @screen-sm-max) {
-					opacity: 0; display: none;
-				}
+
 				&:hover {
 					text-decoration: underline;
-				}
-				&.sm {
-					opacity: 0; display: none;
-					position: static;
-					margin: 0 auto;
-					@media screen and (max-width: @screen-sm-max) {
-						opacity: 1;
-						display: block;
-					}
 				}
 			}
 		}

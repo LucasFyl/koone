@@ -2584,26 +2584,33 @@ h1 {
   font-family: 'Rleud-Bold', helvetica, sans-serif;
 }
 h1.logo {
-  margin: 10px 0;
+  margin: 0;
   padding: 0;
-  width: auto;
+  display: inline-block;
+  height: 80px;
+  max-height: 80px;
+  position: relative;
 }
 h1.logo img {
-  display: block;
-  height: 100%;
-  width: 50%;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  top: 50%;
   float: right;
+  transform: translateY(-50%);
+  width: 60%;
 }
 h1.logo a {
+  height: 100%;
   display: block;
-  height: 45px;
 }
 h1.logo a,
 h1.logo a:hover,
 h1.logo a:active,
 h1.logo a:visited {
   text-decoration: none !important;
-  float: none;
+  float: none !important;
+  color: black !important;
 }
 @media screen and (max-width: 1035px) {
   h1.logo {
@@ -2737,11 +2744,11 @@ main > div {
   height: 100%;
 }
 main .sidebar {
-  position: fixed;
+  position: absolute;
   z-index: 9999;
-  top: 10%;
+  top: 0;
   left: 0;
-  height: 80%;
+  height: 100%;
   background: white;
   min-width: 180px;
   text-align: right;
@@ -2766,22 +2773,22 @@ main .scrollContainer {
 main #gallery {
   position: absolute;
   z-index: 1;
-  max-height: 100%;
   width: 100%;
   min-width: 100%;
   height: 100%;
 }
 main #gallery > figure,
 main #gallery > div {
-  display: block;
-  float: left;
+  display: inline-block;
+  float: none;
   height: 100%;
+  min-height: 100%;
   width: auto;
-  padding-right: 15px;
+  margin-right: 15px;
 }
 main #gallery > figure:last-child,
 main #gallery > div:last-child {
-  padding-right: 0;
+  margin-right: 0;
 }
 main #gallery > figure img,
 main #gallery > div img {
@@ -2861,10 +2868,16 @@ main #gallery figure:last-child figcaption {
   padding-left: 0;
   padding-right: 30px;
   position: relative;
+  max-height: calc(100% - 125px);
 }
 @media screen and (max-width: 991px) {
   #about .container > div:not(.sidebar) {
     padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #about .container > div:not(.sidebar) {
+    max-height: auto;
   }
 }
 #about .container > div:not(.sidebar) h1 {
@@ -2878,6 +2891,16 @@ main #gallery figure:last-child figcaption {
   font-size: 2.4em;
   line-height: 1.48;
 }
+@media screen and (max-width: 1199px) {
+  #about .container > div:not(.sidebar) p {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 991px) {
+  #about .container > div:not(.sidebar) p {
+    font-size: 2.4em;
+  }
+}
 #about .container > div:not(.sidebar) .contact {
   display: block;
   width: 90%;
@@ -2887,33 +2910,7 @@ main #gallery figure:last-child figcaption {
   text-align: center;
   font-family: 'Rleud-Demi', helvetica, sans-serif;
   letter-spacing: 2px;
-  position: absolute;
-  bottom: 25px;
-  left: 100%;
-}
-@media screen and (max-width: 1199px) {
-  #about .container > div:not(.sidebar) .contact {
-    bottom: 60px;
-  }
-}
-@media screen and (max-width: 991px) {
-  #about .container > div:not(.sidebar) .contact {
-    opacity: 0;
-    display: none;
-  }
 }
 #about .container > div:not(.sidebar) .contact:hover {
   text-decoration: underline;
-}
-#about .container > div:not(.sidebar) .contact.sm {
-  opacity: 0;
-  display: none;
-  position: static;
-  margin: 0 auto;
-}
-@media screen and (max-width: 991px) {
-  #about .container > div:not(.sidebar) .contact.sm {
-    opacity: 1;
-    display: block;
-  }
 }

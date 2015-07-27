@@ -1,6 +1,7 @@
 /*jshint unused:false */
 var sidebarState = false;
 var myScroll;
+var resizeTimer;
 // Set parts to be animated
 function setAnimators() {
 	TweenMax.set('.fadein', {opacity:0});
@@ -29,9 +30,13 @@ function setSidebar(val) {
 		}
 		TweenMax.to('.sidebar', 0.5, {css:{x:'+=100%'},ease:Expo.easeOut});
 		setTimeout(animateInSidebar,350);
-		setTimeout(function () {
-	        myScroll.refresh();
-	    }, 10);
+
+		if ($('.main').is('#album')) {
+			setTimeout(function () {
+		        myScroll.refresh();
+		    }, 10);
+		}
+		
 	} else if ( sidebarState === false ) {
 		if ($('.main').is('#about') ) {
 			TweenMax.to('.main', 0.5, {margin:0,ease:Expo.easeOut});
@@ -39,22 +44,45 @@ function setSidebar(val) {
 			TweenMax.to('.scrollContainer', 0.5, {margin:0,ease:Expo.easeOut});
 		}
 		TweenMax.to('.sidebar', 0.5, {css:{x:'-=100%'},ease:Expo.easeOut,onComplete:setAnimators});
-		setTimeout(function () {
-	        myScroll.refresh();
-	    }, 550);
+
+		if ($('.main').is('#album')) {
+			setTimeout(function () {
+		        myScroll.refresh();
+		    }, 550);
+		}
+		
 			
 	}
 }
+function updateGallery() {
+	var totalWidths = -14, // -15 marginLeft -1px to be sure images fits the container
+		boxHeight = $('#gallery').height();
 
+	if ($('.main').is('#album')) {
+		totalWidths += 75;
+	}
+
+	// Set figure Height and update totalwidth value
+	$('#gallery > figure').each(function(){
+		var figure = $(this);
+		TweenMax.set(figure, {height:'100%',onComplete:function(){
+			totalWidths += ( figure.width() + 17);
+		}});
+	}).promise().done(function(){
+		// reset correct width for gallery and refresh iscroll
+		TweenMax.set('#gallery', {width:totalWidths,onComplete:function(){
+			myScroll.refresh();
+		}});
+	});
+
+}
 function initGallery() {
 	var totalWidths = -14, // -15 marginLeft -1px to be sure images fits the container
 		boxHeight = $('#gallery').height();
 
 	// Page specific override
-	var foo = $('.sidebar').parent().width(),
-		marginVal = ( (foo / 100) * 16.66666667 );
 	if ($('.main').is('#album')) {
-		totalWidths += 55;
+		totalWidths += 75;
 	}
 
 	// Initiate horizontal scroller  |  http://iscrolljs.com/
@@ -67,6 +95,7 @@ function initGallery() {
 	    	keyBindings: true,
 	    	fadeScrollbars: false
 	    });
+	    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	};
 
 	// Set images and scrolling area size 
@@ -74,11 +103,9 @@ function initGallery() {
 		// Set image Height and calculate width
 		$('#gallery > figure').each(function(){
 			var figure = $(this);
-				TweenMax.set(figure, {height:boxHeight,onComplete:function(){
-					totalWidths += ( figure.width() + 15);
-				}});
+			totalWidths += ( figure.width() + 17);
 		}).promise().done(function(){
-			TweenMax.set('#gallery', {width:totalWidths,height:boxHeight,onComplete:function(){
+			TweenMax.set('#gallery', {width:totalWidths,onComplete:function(){
 				initScroller();
 			}});
 		});
@@ -87,12 +114,15 @@ function initGallery() {
 	setSizes();
 }
 $(document).ready(function(){
-	// Set the sidebar to disabled by default
-	setSidebar(false);
 	
 	// Load for everything to be loaded then launch initGallery:
 	setTimeout(function(){
-		initGallery();
+		// Initiate gallery behavior
+	  	if ($('#gallery').length) {
+			initGallery();
+		}
+		// Set the sidebar to disabled by default
+		setSidebar(false);
 	}, 750);
 
 	// bind menu link for sidebar animation:
@@ -116,5 +146,17 @@ $( window ).load(function() {
 		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
 	}, 1000);
 	
+
+});
+// Bind window resize to update iscroll when necessary
+$(window).on('resize', function(e) {
+
+  	clearTimeout(resizeTimer);
+	
+	resizeTimer = setTimeout(function() {
+	  	if ($('#gallery').length) {
+	  		updateGallery();	
+	  	}
+	}, 100);
 
 });
