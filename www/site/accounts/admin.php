@@ -8,10 +8,10 @@ language: fr
 role: admin
 token: 21e1974711ec9cb50f0a83a769283b72bb5a2168
 history:
+  - albums/album-1
   - home
   - wallpapers
   - about
   - albums/album-4
-  - albums/album-3
 firstname: Lucas
 lastname: Fayolle

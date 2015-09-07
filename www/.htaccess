@@ -1,3 +1,8 @@
+# Server .htaccess
+
+# Update php version to match kirby
+# AddHandler php53-cgi .php
+
 # Kirby .htaccess
 
 # rewrite rules

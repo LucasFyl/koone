@@ -6,8 +6,8 @@ Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo l
 
 ----
 
-Tags: tag, photo, test
+Tags: tag,photo,test
 
 ----
 
-Year: 2013
+Date: 2015-09-07
