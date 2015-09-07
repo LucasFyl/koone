@@ -6,12 +6,10 @@ password: >
   $2a$10$gSQNoHuq1sgmMiAvq236D.ZK27qnx1noS6Utc.jRncT4MKwwSqOt2
 language: fr
 role: admin
-token: 21e1974711ec9cb50f0a83a769283b72bb5a2168
 history:
-  - albums/album-1
   - home
   - wallpapers
   - about
-  - albums/album-4
 firstname: Lucas
 lastname: Fayolle
+token: 0b9e23001a65b213789de47825def108aa5c5245

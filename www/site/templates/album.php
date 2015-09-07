@@ -9,7 +9,14 @@
               <div>
                 <h1><?php echo $page->title()->html() ?></h1>
                 <ul class="meta">
-                  <li><b>Date:</b> <time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('Y', 'year') ?></time></li>
+                  <li>
+                  <div class="date">
+                    <b>Date:</b>
+                    <time datetime="<?php echo $page->date('c') ?>">
+                      <?php echo $page->date('d/m/Y') ?>
+                    </time>
+                  </div>
+                  </li>
                   <li><b>Tags:</b> <?php echo $page->tags() ?></li>
                 </ul>
                 <div class="text">

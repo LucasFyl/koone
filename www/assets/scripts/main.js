@@ -59,7 +59,7 @@ function updateGallery() {
 		boxHeight = $('#gallery').height();
 
 	if ($('.main').is('#album')) {
-		totalWidths += 75;
+		totalWidths += 80;
 	}
 
 	// Set figure Height and update totalwidth value
@@ -82,7 +82,7 @@ function initGallery() {
 
 	// Page specific override
 	if ($('.main').is('#album')) {
-		totalWidths += 75;
+		totalWidths += 80;
 	}
 
 	// Initiate horizontal scroller  |  http://iscrolljs.com/
