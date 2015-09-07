@@ -50,8 +50,12 @@ p, a {
 	font-size: 1.4em;
 	font-family: @font-light, sans-serif;
 }
-a, a:hover, a:active, a:visited {
-	color: black;
+a, a:hover {
+	color: black !important;
+	text-decoration: none;
+}
+a:focus, a:visited {
+	color: black !important;
 	text-decoration: none;
 }
 	a {
@@ -272,10 +276,11 @@ main {
 						// font-size: 2.1em;
 
 						a {
+							color: white !important;
+							width: 105px;
 							display: inline-block;
 							font-family: @font-main;
 							padding: 5px 15px;
-							width: auto;
 							margin: 0 15px;
 							border: 3px solid white;
 							text-align: center;
@@ -308,6 +313,13 @@ main {
 			padding-right: 30px;
 			position: relative;
 			max-height: ~"calc(100% - 125px)";
+
+			&:nth-child(4) {
+				padding-right: 0;
+				p:last-of-type {
+					margin-bottom: 20px;
+				}
+			}
 
 			@media screen and (max-width: @screen-sm-max) {
 				padding-left: 15px;

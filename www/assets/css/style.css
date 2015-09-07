@@ -2633,10 +2633,13 @@ a {
   font-family: 'Rleud-Light', helvetica, sans-serif, sans-serif;
 }
 a,
-a:hover,
-a:active,
+a:hover {
+  color: black !important;
+  text-decoration: none;
+}
+a:focus,
 a:visited {
-  color: black;
+  color: black !important;
   text-decoration: none;
 }
 a {
@@ -2855,10 +2858,11 @@ main #gallery figure figcaption > div p.link-wrap {
   width: auto;
 }
 main #gallery figure figcaption > div p.link-wrap a {
+  color: white !important;
+  width: 105px;
   display: inline-block;
   font-family: 'Rleud-Regular', helvetica, sans-serif;
   padding: 5px 15px;
-  width: auto;
   margin: 0 15px;
   border: 3px solid white;
   text-align: center;
@@ -2876,6 +2880,12 @@ main #gallery figure:last-child figcaption {
   padding-right: 30px;
   position: relative;
   max-height: calc(100% - 125px);
+}
+#about .container > div:not(.sidebar):nth-child(4) {
+  padding-right: 0;
+}
+#about .container > div:not(.sidebar):nth-child(4) p:last-of-type {
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
   #about .container > div:not(.sidebar) {

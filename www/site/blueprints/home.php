@@ -2,6 +2,8 @@
 
 title: Home
 pages: false
+files: 
+	sortable: true
 fields:
   title:
     label: Title

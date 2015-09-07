@@ -6,11 +6,9 @@
 	<div class="container-fluid">
 		<div class="scrollContainer">
 			<div class="featured-pics" id="gallery">
-		    	<?php foreach($page->images() as $image): ?>
+		    	<?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
 			    <figure>
-			      <!-- <a href="<?php echo $image->url() ?>"> -->
-			        <img src="<?php echo $image->url() ?>" alt="">
-			      <!-- </a> -->
+			        <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
 			    </figure>
 			    <?php endforeach ?>
 		    </div>
