@@ -7,6 +7,7 @@ password: >
 language: fr
 role: admin
 history:
+  - albums/Lil-Amok
   - home
   - wallpapers
   - about

@@ -123,7 +123,7 @@ $(document).ready(function(){
 		}
 		// Set the sidebar to disabled by default
 		setSidebar(false);
-	}, 750);
+	}, 2000);
 
 	// bind menu link for sidebar animation:
 	$('body').on('click', '.sidebarTrigger', function(e) {
@@ -144,7 +144,7 @@ $( window ).load(function() {
 	// wait for eveything to load + a bit more and hide the loader:
 	setTimeout(function(){
 		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut});
-	}, 1000);
+	}, 2000);
 	
 
 });
