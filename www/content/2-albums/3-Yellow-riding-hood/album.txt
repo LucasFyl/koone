@@ -2,11 +2,15 @@ Title: Yellow Riding Hood
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+Text: 
+
+**Leilani Franco** - Contorsionist .
+First I saw her when a friend mine, Sancho, showed me his duett with her for the Canadian Circus Company Cirque Eloize. Then we finally met, 5 years later, in Berlin, where she was doing the show Dummy at the Chamäleon Theatre.
+For this shooting we went out to the Berlin woods and tried to create a little story about a city girl in a yellow hood...
 
 ----
 
-Tags: tag,photo,test
+Tags: leilani franco,yellow riding hood,contorionist,woods,berlin
 
 ----
 

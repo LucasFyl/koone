@@ -2,11 +2,11 @@ Title: Wang Ramirez
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+Text: In october 2014 **Wang Ramirez** invited me to join them for their journey threw the streets of New York. While performing at the annual Fall For Dance Festival, we explored the city and concepts of moving different then others, being individuals, trying to find new ways, new directions...
 
 ----
 
-Tags: tag,photo,test
+Tags: wang ramirez,new york,dance,street,another famous couple
 
 ----
 

@@ -2,11 +2,15 @@ Title: Lil Amok
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+Text: 
+
+**Lil Amok** is an outstanding individual .
+He is one of the worlds best known B-Boys, always pushing the boundaries of acrobatic moves further !!
+We met up in Berlin to see his moves in context to the big city architecture at Potsdamer Platz ...
 
 ----
 
-Tags: lil amok,berlin,potsdamer platz,architecture,dance,bboy,action
+Tags: lil amok,berlin,potsdamer platz,architecture,dance,bboy,action,urban action,flying steps
 
 ----
 
