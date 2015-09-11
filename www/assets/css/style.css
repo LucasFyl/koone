@@ -2685,9 +2685,7 @@ body {
   height: 100%;
 }
 header {
-  height: 10%;
-  max-height: 80px;
-  min-height: 45px;
+  height: 80px;
   overflow: hidden;
 }
 header a.menu {
@@ -2762,11 +2760,11 @@ main > div {
   height: 100%;
 }
 main .sidebar {
-  position: absolute;
+  position: fixed;
+  top: 78px;
+  height: 82%;
   z-index: 9999;
-  top: 0;
   left: 0;
-  height: 100%;
   background: white;
   min-width: 180px;
   text-align: right;

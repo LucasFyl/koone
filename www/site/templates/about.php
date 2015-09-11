@@ -1,6 +1,10 @@
 <?php snippet('header') ?>
 
   <main class="main" role="main" id="about">
+    <div class="sidebar col-sm-2">
+        <?php snippet('menu') ?>    
+    </div>
+
     <div class="container">
         <div class="col-xs-12">
             <h1><?php echo $page->title()->html() ?></h1>
@@ -17,9 +21,6 @@
             <a href="mailto:info@koone.de" class="contact"><?php echo $page->contactText()->html() ?></a>
         </div>
 
-        <div class="sidebar col-sm-2">
-            <?php snippet('menu') ?>    
-        </div>
     </div>
 
   </main>

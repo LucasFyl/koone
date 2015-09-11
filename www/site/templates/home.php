@@ -2,8 +2,11 @@
 
   <main class="main" role="main" id="home">
 
+	<div class="sidebar col-sm-2">
+      	<?php snippet('menu') ?>	
+	</div>
 	
-	<div class="container-fluid">
+	<div class="container-fluid content">
 		<div class="scrollContainer">
 			<div class="featured-pics" id="gallery">
 		    	<?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
@@ -14,9 +17,7 @@
 		    </div>
 		</div>
 
-		<div class="sidebar col-sm-2">
-	      	<?php snippet('menu') ?>	
-		</div>
+
 	</div>
 		
   </main>

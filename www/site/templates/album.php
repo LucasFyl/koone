@@ -1,7 +1,12 @@
 <?php snippet('header') ?>
 
   <main class="main" role="main" id="album">
-    <div class="container-fluid">
+      
+    <div class="sidebar col-sm-2">
+      <?php snippet('menu') ?>  
+    </div>
+
+    <div class="container-fluid content">
 <!--       <figure class='first'>
         <div>
           <h1><?php echo $page->title()->html() ?></h1>
@@ -21,7 +26,7 @@
           </div>
         </div>
       </figure> -->
-      
+
       <div class="scrollContainer">
           <div id="gallery">
             <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
@@ -30,10 +35,6 @@
             </figure>
             <?php endforeach ?>
           </div>
-      </div>
-      
-      <div class="sidebar col-sm-3">
-        <?php snippet('menu') ?>  
       </div>
 
     </div>
