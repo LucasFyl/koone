@@ -2721,8 +2721,7 @@ header a.menu.active {
   background: white;
 }
 #album .first {
-  max-width: 380px;
-  width: 100%;
+  width: 380px;
   padding-left: 35px;
   padding-right: 35px;
   padding-bottom: 20px;
@@ -2786,6 +2785,10 @@ main .sidebar li {
   letter-spacing: 3px;
   font-family: 'Rleud-Light', sans-serif;
 }
+main .content .first {
+  height: 100%;
+  display: inline-block;
+}
 main .scrollContainer {
   position: relative;
   width: 100%;
@@ -2796,6 +2799,7 @@ main .scrollContainer {
 main #gallery {
   position: absolute;
   z-index: 1;
+  background: white;
   display: inline-block;
   height: 100%;
   min-width: 100%;
