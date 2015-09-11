@@ -8,7 +8,7 @@
 			<div class="featured-pics" id="gallery">
 		    	<?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
 			    <figure>
-			        <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title() ?>">
+			        <img src="<?php echo $image->url(); ?>" alt="<?php echo $image->name(); ?>" />
 			    </figure>
 			    <?php endforeach ?>
 		    </div>

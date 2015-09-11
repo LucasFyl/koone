@@ -2,29 +2,28 @@
 
   <main class="main" role="main" id="album">
     <div class="container-fluid">
-
+<!--       <figure class='first'>
+        <div>
+          <h1><?php echo $page->title()->html() ?></h1>
+          <ul class="meta">
+            <li>
+            <div class="date">
+              <b>Date:</b>
+              <time datetime="<?php echo $page->date('c') ?>">
+                <?php echo $page->date('d/m/Y') ?>
+              </time>
+            </div>
+            </li>
+            <li><b>Tags:</b> <?php echo $page->tags() ?></li>
+          </ul>
+          <div class="text">
+            <?php echo $page->text()->kirbytext() ?>
+          </div>
+        </div>
+      </figure> -->
+      
       <div class="scrollContainer">
           <div id="gallery">
-            <figure class='first'>
-              <div>
-                <h1><?php echo $page->title()->html() ?></h1>
-                <ul class="meta">
-                  <li>
-                  <div class="date">
-                    <b>Date:</b>
-                    <time datetime="<?php echo $page->date('c') ?>">
-                      <?php echo $page->date('d/m/Y') ?>
-                    </time>
-                  </div>
-                  </li>
-                  <li><b>Tags:</b> <?php echo $page->tags() ?></li>
-                </ul>
-                <div class="text">
-                  <?php echo $page->text()->kirbytext() ?>
-                </div>
-              </div>
-            </figure>
-
             <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
             <figure>
               <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>">

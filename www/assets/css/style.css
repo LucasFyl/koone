@@ -2580,6 +2580,9 @@ body {
   font-size: 1em;
   font-size: 10px;
 }
+body .container {
+  width: 75% !important;
+}
 h1 {
   font-family: 'Rleud-Bold', helvetica, sans-serif;
 }
@@ -2597,7 +2600,7 @@ h1.logo img {
   position: relative;
   top: 50%;
   float: right;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   width: 60%;
 }
 h1.logo a {
@@ -2720,12 +2723,14 @@ header a.menu.active {
   background: white;
 }
 #album .first {
-  max-width: 350px;
-  width: auto;
+  max-width: 380px;
+  width: 100%;
   padding-left: 35px;
   padding-right: 35px;
   padding-bottom: 20px;
   text-align: right;
+  vertical-align: top;
+  white-space: initial;
 }
 #album .first > div {
   height: auto !important;
@@ -2734,6 +2739,8 @@ header a.menu.active {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  width: 100%;
+  overflow: auto;
 }
 #album .first h1 {
   font-size: 3em;
@@ -2783,33 +2790,32 @@ main .sidebar li {
 }
 main .scrollContainer {
   position: relative;
-  width: auto;
+  width: 100%;
   height: 100%;
+  display: inline-block;
+  white-space: nowrap;
 }
 main #gallery {
   position: absolute;
   z-index: 1;
-  width: 100%;
-  min-width: 100%;
+  display: inline-block;
   height: 100%;
+  min-width: 100%;
+  white-space: nowrap;
 }
 main #gallery > figure {
-  position: relative;
   display: inline-block;
-  vertical-align: top;
-  float: none;
-  height: 100%;
-  min-height: 100%;
-  width: auto;
-  margin-right: 15px;
   box-sizing: border-box;
+  height: 100%;
 }
-main #gallery > figure:last-child {
+main #gallery > figure:last-child img {
   margin-right: 0;
 }
 main #gallery > figure img {
   height: 100%;
-  width: auto;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 15px;
 }
 main #gallery figure figcaption {
   position: absolute;
