@@ -37,8 +37,10 @@ function initScroller(){
     });
 }
 function pageloaded(){
-	if ( $('#gallery').length ){initScroller();}
-	TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut,delay:0.2});
+	setTimeout(function(){
+		if ( $('#gallery').length ){initScroller();}
+	}, 1000);
+	TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut,delay:1.2});
 }
 
 $(document).ready(function(){
@@ -56,7 +58,7 @@ $(document).ready(function(){
 			setSidebar(true);
 		}
 	});
-	
+
 	// Bind window resize to update iscroll when necessary
 	$(window).on('resize', function(e) {
 	  	if ($('#gallery').length) {
@@ -68,12 +70,10 @@ $(document).ready(function(){
 	});
 });
 
-$(function() {
-    if(pageInitialized) {
+window.onload = function(){
+	if(pageInitialized) {
     	return;	
     }
     pageInitialized = true;
     pageloaded();
-});
-
-	
+};

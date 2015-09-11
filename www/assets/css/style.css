@@ -2600,7 +2600,7 @@ h1.logo img {
   position: relative;
   top: 50%;
   float: right;
-  transform: translateY(-60%);
+  transform: translateY(-65%);
   width: 60%;
 }
 h1.logo a {
@@ -2691,9 +2691,9 @@ header {
 header a.menu {
   display: block;
   width: auto;
-  font-size: 2em;
+  font-size: 1.6em;
   height: 100%;
-  line-height: 4em;
+  line-height: 80px;
   padding-right: 0;
   text-transform: uppercase;
   font-family: 'Rleud-Demi', helvetica, sans-serif;
@@ -2729,6 +2729,8 @@ header a.menu.active {
   vertical-align: top;
   white-space: initial;
   overflow: auto;
+  height: 100%;
+  display: inline-block;
 }
 #album .first > div {
   height: auto !important;
@@ -2741,10 +2743,13 @@ header a.menu.active {
   overflow: auto;
 }
 #album .first h1 {
-  font-size: 3em;
+  font-size: 2.1em;
   letter-spacing: 2px;
   font-family: 'Rleud-Bold', sans-serif;
   margin-top: 20px;
+}
+#album .first li {
+  font-size: 1.2em;
 }
 @media screen and (max-width: 1199px) {
   #album .first {
@@ -2777,18 +2782,14 @@ main .sidebar nav {
   display: inline-block;
 }
 main .sidebar h2 {
-  font-size: 2.1em;
+  font-size: 1.8em;
   letter-spacing: 2px;
   font-family: 'Rleud-Bold', sans-serif;
 }
 main .sidebar li {
-  font-size: 1.2em;
+  font-size: 1em;
   letter-spacing: 3px;
   font-family: 'Rleud-Light', sans-serif;
-}
-main .content .first {
-  height: 100%;
-  display: inline-block;
 }
 main .scrollContainer {
   position: relative;
