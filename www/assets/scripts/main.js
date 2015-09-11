@@ -38,9 +38,7 @@ function initScroller(){
 }
 function pageloaded(){
 	if ( $('#gallery').length ){initScroller();}
-	// setTimeout(function(){
-		TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut,delay:0.2});
-	// }, 2000);
+	TweenMax.to('#loader', 0.4, {opacity:0,display:'none',ease:Power2.easeOut,delay:0.2});
 }
 
 $(document).ready(function(){

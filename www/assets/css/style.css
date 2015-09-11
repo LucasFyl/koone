@@ -2721,13 +2721,14 @@ header a.menu.active {
   background: white;
 }
 #album .first {
-  width: 380px;
+  width: 350px;
   padding-left: 35px;
   padding-right: 35px;
   padding-bottom: 20px;
   text-align: right;
   vertical-align: top;
   white-space: initial;
+  overflow: auto;
 }
 #album .first > div {
   height: auto !important;
