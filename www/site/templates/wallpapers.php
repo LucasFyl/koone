@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main" id="album">
+  <main class="main wallpapers" role="main" id="album">
     <div class="container-fluid">
 
       <div class="scrollContainer">

@@ -2966,3 +2966,6 @@ main #gallery figure:last-child figcaption {
 #about .container > div:not(.sidebar) .contact:hover {
   text-decoration: underline;
 }
+main.wallpapers figure {
+  cursor: pointer;
+}
