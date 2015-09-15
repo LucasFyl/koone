@@ -4,5 +4,8 @@ Title: Wallpapers
 
 Text: 
 
-Here you can download wallpapers !!
-You can choose between 3 different sizes to fit all your screens ;)
+Something for your desktops !
+You can choose between 3 different sizes to fit all your screens !
+**small** : 1200 x 750
+**medium** : 1600 x 1000
+**big** : 2800 x 1880

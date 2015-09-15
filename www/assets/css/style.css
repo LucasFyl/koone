@@ -2601,6 +2601,9 @@ h1.logo img {
   top: 50%;
   float: right;
   transform: translateY(-65%);
+  -webkit-transform: translateY(-65%);
+  -moz-transform: translateY(-65%);
+  -o-transform: translateY(-65%);
   width: 60%;
 }
 h1.logo a {
@@ -2739,6 +2742,9 @@ header a.menu.active {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   width: 100%;
   overflow: auto;
 }
@@ -2779,6 +2785,9 @@ main .sidebar nav {
   position: relative;
   top: 50%;
   transform: translateY(-52%);
+  -webkit-transform: translateY(-52%);
+  -moz-transform: translateY(-52%);
+  -o-transform: translateY(-52%);
   display: inline-block;
 }
 main .sidebar h2 {
@@ -2811,6 +2820,8 @@ main #gallery > figure {
   display: inline-block;
   box-sizing: border-box;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 main #gallery > figure:last-child img {
   margin-right: 0;
@@ -2836,10 +2847,15 @@ main #gallery figure figcaption {
 }
 main #gallery figure figcaption > div {
   height: auto;
+  max-height: 100%;
   display: inline-block;
   position: relative;
   top: 50%;
+  min-width: 75%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 main #gallery figure figcaption > div > div {
   opacity: 0;
@@ -2853,13 +2869,12 @@ main #gallery figure figcaption > div h3 {
   margin-top: 0;
   font-family: 'Rleud-Demi', helvetica, sans-serif;
   letter-spacing: 3px;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
   text-transform: none;
   font-size: 5.4em;
   opacity: 0;
 }
 main #gallery figure figcaption > div p:not(.link-wrap) {
-  margin-top: 3em;
   margin-bottom: 3em;
   font-family: 'Rleud-Bold', helvetica, sans-serif;
   letter-spacing: 2px;
@@ -2869,6 +2884,13 @@ main #gallery figure figcaption > div p.link-wrap {
   text-align: center;
   display: inline-block;
   width: auto;
+  overflow: auto;
+  float: left;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 main #gallery figure figcaption > div p.link-wrap a {
   color: white !important;
