@@ -28,22 +28,26 @@
             	<figcaption class="hover-content">
             		<div class="center-bloc vertial-center">
             			<h3><?php echo $w->title()->html(); ?></h3>
-            			<div class="row">
             				<p class="col-xs-12">Download:</p>
-                    <p class="link-wrap">
+                    <p class="col-xs-12">
                       <?php if($imageSmall = $w->image('small.jpg')): ?>
-                      <a href="<?php echo $imageSmall->url() ?>" class="col-xs-3" download>Small</a>
+                      <a href="<?php echo $imageSmall->url() ?>" download>
+                        <span>Small</span>
+                      </a>
                       <?php endif ?>
 
                       <?php if($imageMedium = $w->image('medium.jpg')): ?>
-                      <a href="<?php echo $imageMedium->url() ?>" class="col-xs-4" download>Medium</a>
+                      <a href="<?php echo $imageMedium->url() ?>" download>
+                        <span>Medium</span>
+                      </a>
                       <?php endif ?>
                       
                       <?php if($imageBig = $w->image('big.jpg')): ?>
-                      <a href="<?php echo $imageBig->url() ?>" class="col-xs-3" download>Big</a>
+                      <a href="<?php echo $imageBig->url() ?>" download>
+                        <span>Big</span>
+                      </a>
                       <?php endif ?>   
                     </p>
-            			</div>
             		</div>
             	</figcaption>
             </figure>

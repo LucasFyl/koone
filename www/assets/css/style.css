@@ -2863,7 +2863,7 @@ main #gallery figure figcaption > div > div {
 main #gallery figure figcaption > div h3,
 main #gallery figure figcaption > div p,
 main #gallery figure figcaption > div a {
-  color: white;
+  color: white !important;
 }
 main #gallery figure figcaption > div h3 {
   margin-top: 0;
@@ -2874,39 +2874,40 @@ main #gallery figure figcaption > div h3 {
   font-size: 5.4em;
   opacity: 0;
 }
-main #gallery figure figcaption > div p:not(.link-wrap) {
+main #gallery figure figcaption > div p {
   margin-bottom: 3em;
   font-family: 'Rleud-Bold', helvetica, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-main #gallery figure figcaption > div p.link-wrap {
-  text-align: center;
-  display: inline-block;
-  width: auto;
-  overflow: auto;
-  float: left;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+main #gallery figure figcaption > div p:last-child {
+  float: none;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
 }
-main #gallery figure figcaption > div p.link-wrap a {
-  color: white !important;
-  width: 105px;
-  display: inline-block;
+main #gallery figure figcaption > div a {
+  width: 33.3%;
+  display: block;
+  float: left;
   font-family: 'Rleud-Regular', helvetica, sans-serif;
-  padding: 5px 15px;
+}
+main #gallery figure figcaption > div a span {
+  max-width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 25px;
   margin: 0 15px;
   border: 3px solid white;
   text-align: center;
+  font-size: 0.8em;
 }
-main #gallery figure figcaption > div p.link-wrap a:first-child {
-  margin-left: 0;
-}
-main #gallery figure figcaption > div p.link-wrap a:last-child {
-  margin-right: 0;
+@media screen and (max-width: 1100px) {
+  main #gallery figure figcaption > div a span {
+    border-width: 2px;
+    padding: 5px 15px;
+    font-size: 0.6em;
+  }
 }
 main #gallery figure:last-child figcaption {
   width: 100%;

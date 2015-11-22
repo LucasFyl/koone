@@ -286,7 +286,7 @@ main {
 						opacity: 0;
 					}
 					h3, p, a {
-						color: white;
+						color: white !important;
 					}
 
 					h3 {
@@ -298,44 +298,40 @@ main {
 						font-size: 5.4em;
 						opacity: 0;
 					}
-					p:not(.link-wrap) {
+					p {
 						margin-bottom: 3em;
 						font-family: @font-bold;
 						letter-spacing: 2px;
 						text-transform: uppercase;
+						&:last-child {
+							float: none;
+							display: block;
+							width: 60%;
+							margin: 0 auto;
+						}
 					}
-					p.link-wrap {
-						text-align: center;
-						display: inline-block;
-						width: auto;
-						// font-size: 2.1em;
-
-						// ??
-						overflow: auto;
-						float: left;
-						margin-left: 50%;
-						transform: translateX(-50%);
-						-webkit-transform: translateX(-50%);
-						-moz-transform: translateX(-50%);
-						-o-transform: translateX(-50%);
-
-
-						a {
-							color: white !important;
-							width: 105px;
-							display: inline-block;
-							font-family: @font-main;
-							padding: 5px 15px;
+					a {
+						width: 33.3%;
+						display: block; float: left;
+						font-family: @font-main;
+						span {
+							max-width: 100%;
+							box-sizing:border-box;
+							display:inline-block;
+							padding: 10px 25px;
 							margin: 0 15px;
 							border: 3px solid white;
 							text-align: center;
-							&:first-child {
-								margin-left: 0;
-							}
-							&:last-child {
-								margin-right: 0;
-							}
+							font-size: 0.8em;
+							// text-transform: lowercase;
+							@media screen and (max-width: 1100px) {
+								border-width: 2px;
+								padding: 5px 15px;
+								font-size: 0.6em;
+							}		
 						}
+
+						// text-decoration: underline !important;
 					}
 						
 				}

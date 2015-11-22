@@ -23,9 +23,9 @@ $(document).ready(function(){
 	"use strict";
 	initHover();
 	// bind hover intent on image:
-	$('#gallery figure').hoverIntent(hoverInWp, hoverOutWp);
+	$('#gallery figure').hover( hoverInWp, hoverOutWp );
 	// trick to maintain hover state when download link is hovered:
-	$('ficaption a').hover(function(){
+	$('ficaption, ficaption a').hover(function(){
 		var _this = $(this),
 		hover = _this.find('figcaption'),
 		el = hover.find('h3, > div > div');
