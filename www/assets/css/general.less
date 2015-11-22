@@ -306,7 +306,7 @@ main {
 						&:last-child {
 							float: none;
 							display: block;
-							width: 60%;
+							width: 100%;
 							margin: 0 auto;
 						}
 					}
@@ -314,24 +314,22 @@ main {
 						width: 33.3%;
 						display: block; float: left;
 						font-family: @font-main;
+						box-sizing:border-box;
 						span {
 							max-width: 100%;
-							box-sizing:border-box;
+							box-sizing: content-box;
 							display:inline-block;
 							padding: 10px 25px;
 							margin: 0 15px;
 							border: 3px solid white;
 							text-align: center;
 							font-size: 0.8em;
-							// text-transform: lowercase;
 							@media screen and (max-width: 1100px) {
 								border-width: 2px;
 								padding: 5px 15px;
 								font-size: 0.6em;
 							}		
 						}
-
-						// text-decoration: underline !important;
 					}
 						
 				}

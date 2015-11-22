@@ -2,7 +2,7 @@
 
   <main class="main" role="main" id="album">
       
-    <div class="sidebar col-sm-2">
+    <div class="sidebar col-sm-3">
       <?php snippet('menu') ?>  
     </div>
 

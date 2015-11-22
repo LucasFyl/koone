@@ -2883,7 +2883,7 @@ main #gallery figure figcaption > div p {
 main #gallery figure figcaption > div p:last-child {
   float: none;
   display: block;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 main #gallery figure figcaption > div a {
@@ -2891,10 +2891,11 @@ main #gallery figure figcaption > div a {
   display: block;
   float: left;
   font-family: 'Rleud-Regular', helvetica, sans-serif;
+  box-sizing: border-box;
 }
 main #gallery figure figcaption > div a span {
   max-width: 100%;
-  box-sizing: border-box;
+  box-sizing: content-box;
   display: inline-block;
   padding: 10px 25px;
   margin: 0 15px;

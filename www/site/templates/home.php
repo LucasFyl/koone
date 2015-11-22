@@ -2,7 +2,7 @@
 
   <main class="main" role="main" id="home">
 
-	<div class="sidebar col-sm-2">
+	<div class="sidebar col-sm-3">
       	<?php snippet('menu') ?>	
 	</div>
 	
